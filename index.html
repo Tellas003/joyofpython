@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy of Python</title><LINK REL="SHORTCUT ICON"  HREF="xie.jpg">
+      <meta name="author" content="A Maria Tellas Bsc.,MCA">
+
+    <!--Add Bootstrap css-->
+    
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+      <!--The facuty swiper css-->
+      <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Font Awesome for Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+      
+      .navbar {
+        display: grid;
+        margin-top: 3px;
+        position: fixed;
+        top: 50px;
+        background-color: white;
+        border-radius:100px;
+               width: 40%;
+       left: 30%;
+    
+        
+      
+      }
+    
+      @media screen and (max-width: 988px) {
+
+
+
+        #la {
+          display: none;
+        }
+        .navbar{
+            display: grid;
+        }
+      }
+    
+         /* Navbar Styles */
+        .navbar-nav .nav-link {
+            color: #171616;
+            font-weight: 700;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color:#007bff;/* Change the color on hover */
+             /* Background color on hover */
+        }
+
+        
+
+        .dropdown-menu .dropdown-item {
+            color: #1A0C4E; /* Text color of dropdown items */
+            background-color:#fff;
+            
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #F3E5C4; /* Background color on hover */
+            color:black;
+        }
+         @media (max-width: 768px) {
+          .navbar-nav .nav-link:hover {
+            color:#007bff;/* Change the color on hover */
+             /* Background color on hover */
+        }
+        .dropdown-menu .dropdown-item {
+            font-size:13px;
+            
+        }
+      
+      
+         }
+        
+
+    </style>
+  
+</head>
+
+
+    <!--Navbar start-->
+  
+    <nav class="navbar navbar-expand-lg fixed-top"id="navbar" 
+    style ="justify-content: center; display: grid;">
+        <div class="container-fluid">
+         <!---- <a class="navbar-brand" href="index.php"><img src="logo.png" height="200px" width="200px" alt="" class="img-fluid"></a>-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"style="background-color:#e6e4e2;">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="index.php"><img src="logo.png" height="130px" width="130px" alt="" class="img-fluid"></a></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <!--  <li class="nav-item">
+                  <a class="nav-link mx-lg-2 " aria-current="page" href="index.php"style="font-weight: 700">Home</a>-->
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    About Us
+                  </a>
+                   <!----<ul class="dropdown-menu">
+                   <li><a class="dropdown-item" href="about.php">Stripes Academy</a></li>
+                    <li><a class="dropdown-item" href="principalmessage.php">Principal's Desk</a></li>
+                    <li><a class="dropdown-item" href="feed.php">Student's Speak</a></li>
+              
+                  </ul>     -->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2"  href="#con">Contents</a>
+                </li>
+                <!--- <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                      Contents
+                    </a>
+                    <ul class="dropdown-menu">
+                   
+                    <li><a class="dropdown-item" href="shipsimulatorrolebasedcourse2.php">The Role-Based Bridge</a></li>
+                    <li><a class="dropdown-item" href="shipsimulatorcourse1.php">Ship Simulator and Bridge Teamwork</a></li>
+                                        <li><a class="dropdown-item" href="shipmastercourse3.php">Shipmasters Command and Leadership Evaluvation</a></li>
+                    <li><a class="dropdown-item" href="bridgewatchkeepingcourse4.php">Bridge Watchkeeping for Junior Officers  </a></li>
+                    <li><a class="dropdown-item" href="bridgewatchkeepingratingscourse5.php">Bridge Watchkeeping for Ratings</a></li>
+                    <li><a class="dropdown-item" href="shiptransfercourse6.php">Ship-Ship Transfer Navigational Training</a></li>
+                    <li><a class="dropdown-item" href="largevesselcourse7.php">Large Vessel Manoeuvring</a> </li>
+                    <li><a class="dropdown-item" href="framopumpcourse8.php">Framo Pump Operations and Maintenance</a></li>
+                    <li><a class="dropdown-item" href="electricalcourse9.php">Electrical, Electronics, and Automation Course</a></li>
+                    <li><a class="dropdown-item" href="bwtscourse10.php">Ballast Water Treatment Systems</a></li>
+                    <li><a class="dropdown-item" href="marinecourse11.php">Marine Hydraulics Training </a></li>
+                    <li><a class="dropdown-item" href="pneumaticscourse12.php">Pneumatics Training  </a></li>
+                    <li><a class="dropdown-item" href="safetycourse13.php">Safety Training for Ratings </a></li>
+                    
+                    </ul>
+                  </li>-->
+                  <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="#main" >
+                      Authors
+                    </a>
+                  <li class="nav-item">
+                    <a class="nav-link mx-lg-2"  href="#gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-lg-2"  href="#contact">Contact</a>
+                  </li>
+                 
+                   <!----<ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="search.php">Verify Certificate</a></li>
+                      <li><a class="dropdown-item" href="stafflogin.php">Staff Login</a></li>
+                      <li></li>
+                      <li><a class="dropdown-item" href="adminlogin.php">Admin Login</a></li>
+                    </ul>-->
+                  </li>
+               
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+   
+    </script>
+    
+      
+    
+     
+      
+      <!--navbar end-->
+ <!--coe image main part start-->
+ <style>
+  .joy {
+      font-size: 6em;
+      font-weight: bold;
+  }
+  .pyt{
+    font-size: 6em;
+      font-weight: bold;
+      
+  }
+ 
+
+  img {
+           width: auto;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+       
+</style>
+  
+ <section  id="hero">
+  <div class="container" style="z-index: 1; margin-top: -10px;">
+    <div class="row align-items-center" >
+        <div class="" data-aos="fade-right" data-aos-delay="300">
+            <h1 class="joy">Joy of</h1>
+            <h1 class="Pyt" style="color: #1d8b73; font-weight: bold; font-size: 6em;">Python</h1>
+            <h3>For College Students</h3>
+        </div>
+       <!-- <div class="col-md-6 text-center" data-aos="fade-left" data-aos-delay="300">
+            <img src="Joy of Python - for College Students (1).jpg" class="img-fluid" alt="Python" id="Python">
+        </div>-->
+    </div>
+</div>
+
+
+</section>
+
+ <!--coe image main part end-->
+<style>
+  .content {
+    
+    position: relative;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+  }
+        .card {
+            border: none;
+            border-radius: 15px; /* Reduced radius for better mobile view */
+            overflow: hidden; /* To ensure rounded corners look good */
+        }
+        .card-title {
+            font-size: 1.25em; /* Adjusted for better responsiveness */
+        }
+        .card-body {
+            padding: 1.5rem; /* Adjusted padding for better spacing */
+        }
+        .btn-primary {
+            font-size: 0.9em; /* Adjusted button text size */
+        }
+        .container {
+            padding: 1rem; /* Reduced padding for better mobile view */
+        }
+        @media (max-width: 976px) {
+            [data-aos] {
+                opacity: 1 !important; /* Ensure elements are visible */
+                transform: none !important; /* Remove any transformations */
+            }
+        }
+        a{
+          text-decoration: none;
+          color: black;
+        }
+        a:hover{
+          color: #007bff;
+        }
+      
+
+
+          </style>
+
+<div class="container" id="con">
+  
+  <h1 class="content" style="color: #1d8b73;">Contents</h1><br><br><br>
+
+  <!-- Card Rows -->
+  <div class="row" data-aos-delay="300" data-aos="fade-right">
+      <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+              <div class="card-body">
+                <a href="#"> <h5 class="card-title">Instruction and Turtle</h5></a><br>
+                  <p class="card-text"></p>
+                 
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">Variables, Operations and Types</h5></a><br>
+                  <p class="card-text"></p>
+                
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">Alternatives</h5></a><br>
+                  <p class="card-text"></p>
+                
+              </div>
+          </div>
+      </div>
+  </div>
+
+      <!-- Additional Card Rows -->
+        <!-- Repeat the structure for additional rows -->
+
+        <div class="row" data-aos-delay="300" data-aos="fade-left">
+          <div class="col-md-4 mb-4">
+              <div class="card shadow-sm">
+                  <div class="card-body">
+                    <a href="#"><h5 class="card-title">For Loops</h5></a><br>
+                      <p class="card-text"></p>
+                     
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card shadow-sm">
+                  <div class="card-body">
+                    <a href="#"><h5 class="card-title">While Loops</h5></a><br>
+                      <p class="card-text"></p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card shadow-sm">
+                  <div class="card-body">
+                    <a href="#"><h5 class="card-title">Functions</h5></a><br>
+                      <p class="card-text"></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Repeat for remaining card sections -->
+  <!-- Ensure to use similar structure for responsiveness -->
+
+  <div class="row" data-aos-delay="300" data-aos="fade-right">
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+              <a href="#"><h5 class="card-title">Lists</h5></a><br>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+              <a href="#"><h5 class="card-title">Strings</h5></a><br>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+              <a href="#"><h5 class="card-title">Interacting with Files</h5></a><br>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row" data-aos-delay="300" data-aos="fade-left">
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+          <a href="#"><h5 class="card-title">String Formatting</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+           <a href="#"> <h5 class="card-title">Importing Modules</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Tuples, Dictionaries and Sets</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  </div>
+  <div class="row" data-aos-delay="300" data-aos="fade-right">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">More on Functions</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Comprehensive</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Exceptions</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  </div>
+  <div class="row" data-aos-delay="300" data-aos="fade-left">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Decorators</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Namespace and Classes</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Magic Methods and Operator Overloading</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div></div>
+ 
+  <div class="row" data-aos-delay="300" data-aos="fade-right">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Class Hierarchy</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Matplotlib (Python Plotting Library)</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Graphical User Interface with Python</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="row" data-aos-delay="300" data-aos="fade-left">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+            <a href=""><h5 class="card-title">Database Connectivity with SQLITE</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Django</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <a href="#"><h5 class="card-title">Networking with Python</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+</div>
+  <div class="row" data-aos-delay="300" data-aos="fade-right">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+           <a href="#"><h5 class="card-title">The Match and the Walrus</h5></a><br>
+            <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<style>
+  @media (max-width: 768px){
+  .testRow {
+    height: 0px;
+  }
+}
+</style>
+<!--Book Authors-->
+
+<div class="V_bk bN_fM w_br w_bs" id="main"><object type="image/svg+xml" aria-label="Animated ocean waves, with a paper boat floating" width="100%" height="125" data="assets/images/waves.svg"><img alt="Animated ocean waves, with a paper boat floating" src="waves.svg"></object></div>
+<div class="container2" > 
+
+<div class="contents-wraper">
+  <br><br><br><h1 class="content">Authors</h1>
+
+
+
+<section class="testRow">
+  
+  <div class="testItem active">
+    <img src="assets/images/authour_1.jpg">
+    <h3>Fr Dr Thomas Schwarz SJ</h3>
+   <!-- <h4>USA</h4>-->
+    <p>Fr Dr Thomas Schwarz SJ holds two doctorates, in Mathematics from the Fern University, Germany (1984) and in Computer Science from the University of California (1994). He has more than 120 publications under his name, and his research interest is in Distributed Systems. He is currently an Associate Professor at Marqutee University, Milwaukee and Visiting Professor at Xavier Institute of Engineering, Mumbai.</p>
+  </div>
+
+  <div class="testItem">
+    <img src="assets/images/authour_2.jpg">
+    <h3>Dr Jaychand Upadhyay</h3>
+    <!--<h4>Mumbai, INDIA</h4>-->
+    <p>Dr Jaychand Upadhyay is an Associate Professor and HOD of the Department of Information Technology at Xavier Institute of Engineering. He completed his PhD in Information Science from Sophio University. Tokyo. His research interests include GAIT recognition, Computer Vision, Machine Learning, and Deep Learning</p>
+  </div>
+
+  <div class="testItem">
+    <img src="assets/images/authour_4.jpg">
+    <h3>Prof. Suhas Lawand</h3>
+   <!--<h4>Mumbai, INDIA</h4>-->
+    <p>Prof. Suhas Lawand is an Assistant Professor in the Department of Computer Science and Engineering at Xavier Institute of Engineering. He is pursuing his PhD in Information Technology from University of Mumbai. His research interests include Blockchain, Supply Chain Management, Cyber Security, and Machine Learning.
+    </p>
+  </div>
+
+  <div class="testItem">
+    <img src="assets/images/authour_3.jpg">
+    <h3>Fr Dr David K Roy SJ</h3>
+   <!--- <h4>Ahmedabad, Gujarat</h4>-->
+    <p>Fr Dr David K Roy SJ did his MA in Philosophy from Loyola College, Chennai, Master of Computer Applications (MCA) from St.Joseph's College, Trichy and PhD from Marqutee University, Milwaukee, WI, USA. Fr Dr Thomas Schwarz SJ was his PhD advisor. His research interests include NVRAM, Storage Systems and Machine Learning. He teaches Computer Science and Applications at St. Xavier's College, Ahmedabad, Gujarat.
+    </p>
+  </div>
+
+  <div class="testItem">
+    <img src="assets/images/authour_5.jpg">
+    <h3>Fr Dr John Rose Santiago SJ</h3>
+   <!--- <h4>Mumbai, INDIA</h4>-->
+    <p>Fr Dr Jhon Rose Santiago SJ did his Bsc and Msc in Physics from St. Xavier's College, Ahmedabad and Loyola College, Chennai respectively. He did his MS in Computer Engineering and PhD in Electrical Engineering from Santa Clara University, California. His research interest include Power Devices and Embedded Systems. He is the Director of Xavier Institute of Engineering.</p>
+  </div>
+
+</section>
+
+<section class="indicators">
+  <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+  <div class="dot" attr='1' onclick="switchTest(this)"></div>
+  <div class="dot" attr='2' onclick="switchTest(this)"></div>
+  <div class="dot" attr='3' onclick="switchTest(this)"></div>
+  <div class="dot" attr='4' onclick="switchTest(this)"></div>
+</section>
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+// Access the testimonials
+let testSlide = document.querySelectorAll('.testItem');
+// Access the indicators
+let dots = document.querySelectorAll('.dot');
+
+var counter = 0;
+
+// Add click event to the indicators
+function switchTest(currentTest){
+currentTest.classList.add('active');
+var testId = currentTest.getAttribute('attr');
+if(testId > counter){
+  testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+  counter = testId;
+  testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+}
+else if(testId == counter){return;}
+else{
+  testSlide[counter].style.animation = 'prev1 0.5s ease-in forwards';
+  counter = testId;
+  testSlide[counter].style.animation = 'prev2 0.5s ease-in forwards';
+}
+indicators();
+}
+
+// Add and remove active class from the indicators
+function indicators(){
+for(i = 0; i < dots.length; i++){
+  dots[i].className = dots[i].className.replace(' active', '');
+}
+dots[counter].className += ' active';
+}
+
+// Code for auto sliding
+function slideNext(){
+testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+if(counter >= testSlide.length - 1){
+  counter = 0;
+}
+else{
+  counter++;
+}
+testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+indicators();
+}
+function autoSliding(){
+deleteInterval = setInterval(timer, 2000);
+function timer(){
+  slideNext();
+  indicators();
+}
+}
+autoSliding();
+
+// Stop auto sliding when mouse is over the indicators
+const container = document.querySelector('.indicators');
+container.addEventListener('mouseover', pause);
+function pause(){
+clearInterval(deleteInterval);
+}
+
+// Resume sliding when mouse is out of the indicators
+container.addEventListener('mouseout', autoSliding);
+
+</script>
+
+<!--Gallary start-->
+<div id="gallery">
+<br><h1 class="content">Gallery</h1><br><br>
+<div class="container py-5">
+  <div class="row justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+              <img src="assets/images/Joy of Python - for College Students (1).jpg" alt="Gallery Image 1" class="img-fluid">
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+              <img src="assets/images/Joy of Python authors.jpg" alt="Gallery Image 2" class="img-fluid" >
+          </div>
+      </div>
+     
+      </div>
+      <!-- Add more images as needed -->
+  </div>
+</div>
+<!--Gallary end-->
+
+<!-- Footer -->
+<style>
+  footer {
+    background-color: #e6e4e2;
+    color: black;
+    padding: 20px 0;
+  }
+
+  .footer-logo {
+    max-width: 100px;
+    /* Adjust logo size */
+  }
+
+  .social {
+    font-size: 24px;
+    margin-top: 10px;
+
+  }
+
+  .quick-links,
+  .admin-links,
+  .contact-info {
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+
+  .h5 {
+    font-weight: bold;
+  }
+
+  .copyright {
+    margin-top: 20px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    /* Remove underline from links */
+  }
+
+  a:hover {
+    color: #007bff;
+    /* Change link color on hover if needed */
+  }
+
+  .text-center {
+    background-color: #1d8b73;
+    color: #fff;
+    margin-top: -17px;
+    margin-bottom: -17px;
+  }
+
+  @media (max-width: 991px) {
+    p {
+      font-size: 13px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Content goes here -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- First Column: Company Logo and Social Media -->
+        <div class="col-md-3" align="left">
+          <img src="logo.png" alt="Company Logo" class="footer-logo mb-3">
+          <p>
+            <br> St. Xavier Institute of Technology
+            <br> Opposite S.L.Raheja Hospital
+            <br>Mahim Causeway, Mahim (West)
+            <br> Raheja Hospital Marg
+            <br> Mumbai, Maharashtra 400016
+          </p>
+
+        </div>
+
+        <!-- Second Column: Quick Links -->
+        <div class="col-md-3 quick-links" align="left">
+          <h5 class="h5">Quick Links</h5></br>
+          <p> <a href="#">Home</a></p>
+          <p> <a href="#con">Contents</a></p>
+          <p> <a href="#gallery">Gallery</a></p>
+          <p> <a href="#main">Authors</a></p>
+          <!-- Add more quick links as needed -->
+          </ul>
+        </div>
+
+        <!-- Third Column: Admin Links -->
+        <div class="col-md-3 quick-links" align="left">
+          <h5 class="h5">Contact</h5><br>
+          <p>St. Xavier College</p>
+          <p><i class="bi bi-telephone-fill"></i>&nbsp 022 2445 5937 </p>
+          <p><i class="bi bi-envelope-fill"></i>&nbsp office@xavier.ac.in</p>
+
+          <!-- Add more admin links as needed -->
+
+        </div>
+
+        <!-- Fourth Column: Contact Information -->
+        <div class="col-md-3 contact-info" align="left">
+          <h5 class="h5">Social</h5><br>
+          <div class="social">
+            <a href=""><i class="bi bi-facebook"></i></a>&nbsp
+            <a href=""><i class="bi bi-instagram"></i></a>&nbsp
+            <a href="https://www.linkedin.com/st.xavierinstituteoftechnology/."><i class="bi bi-linkedin"></i></a>&nbsp
+            <a href="https://wa.me/+918454020093"> <i class="bi bi-whatsapp"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Copyright Section -->
+  <div class="text-center copyright">
+    <hr>
+    <p style="color: #fff;">&copy; 2024 All rights reserved | Designed and Powered by <span><a href="tellas.netlify.app" style="color: #fff;">Tellas Technologies</a></span></p>
+    <hr>
+  </div>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--Bootstrap Script Source-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Duration of animations
+            easing: 'ease-in-out', // Easing function
+            once: false, // Animation happens only once
+            disable: function () {
+                // Disable animations for mobile devices
+                return window.innerWidth < 768; // Or any other breakpoint
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
