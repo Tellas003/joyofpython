@@ -1,3 +1,39 @@
+
+
+/* Style for Home Icon */
+
+body{
+    background-image: url(../assets/images/work-process-pattern.png);
+}
+.content {
+    
+    position: relative;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight:bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color:#1d8b73; ;
+  text-decoration: underline;
+  }
+#homeIcon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.home-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-icon:hover {
+    transform: rotate(360deg);
+}
+
+
 /* Ensure the main video is responsive and maintains aspect ratio */
 .video-container {
     position: relative;
@@ -17,7 +53,7 @@
 
 /* Highlight the active link */
 .list-group-item.active {
-    background-color: #007bff;
+    background-color: #1d8b73;
     color: white;
     cursor: pointer;
 }
